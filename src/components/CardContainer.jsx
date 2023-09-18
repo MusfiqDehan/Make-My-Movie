@@ -1,10 +1,6 @@
 import Card from "./Card";
 
-const CardContainer = ({
-    searchResults,
-    handleAddToCart,
-    handleSelectedActors,
-}) => {
+const CardContainer = ({ searchResults, handleAddToCart }) => {
     return (
         <section className="grid grid-cols-3 gap-1 w-3/4">
             {searchResults.length > 0 ? (
@@ -14,7 +10,6 @@ const CardContainer = ({
                             key={actor.id}
                             actor={actor}
                             handleAddToCart={handleAddToCart}
-                            handleSelectedActors={handleSelectedActors}
                         />
                     );
                 })
